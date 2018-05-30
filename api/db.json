@@ -1,19 +1,24 @@
 {
-    "posts": [
-        {
-           "id": 1,
-           "title": "Post One",
-           "body": "This is Body One" 
-        },
-        {
-           "id": 2,
-           "title": "Post Two",
-           "body": "This is Body 2" 
-        },
-        {
-           "id": 3,
-           "title": "Post Three",
-           "body": "This is Body 3" 
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "Post One",
+      "body": "This is Body One"
+    },
+    {
+      "id": 2,
+      "title": "Post Two",
+      "body": "This is Body 2"
+    },
+    {
+      "id": 3,
+      "title": "Post Three",
+      "body": "This is Body 3"
+    },
+    {
+      "title": "Post Four",
+      "body": "Post 4 Body",
+      "id": 4
+    }
+  ]
 }
