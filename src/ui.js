@@ -62,6 +62,51 @@ class UI {
        this.titleInput.value = '';
        this.bodyInput.value = ''; 
     }
+
+    //Fill form to edit
+    fillForm(data) {
+        this.titleInput.value = data.title;
+        this.bodyInput.value = data.body;
+        this.idInput.value = data.id;
+
+        this.changeFormState('edit');
+    }
+
+    clearIdInput() {
+        this.idInput.value = '';
+    }
+
+    changeFormState(stateType) {
+        if (stateType === 'edit') {
+            //Change SubmitButton color and text
+            this.postSubmit.textContent = 'Update Post!';
+            this.postSubmit.className = 'post-submit btn btn-warning btn-block';
+            //Create CancelButton
+            const button = document.createElement('button');
+            button.className = 'post-cancel btn btn-light btn-block';
+            button.appendChild(document.createTextNode('Cancel Edit'));
+            //Get Parent
+            const cardForm = document.querySelector('.card-form');
+            // element to insert before
+            const formEnd = document.querySelector('.form-end');
+            //Insert CancelBtn
+            cardForm.insertBefore(button, formEnd);
+        } else {
+            //Change SubmitButton color and text
+            this.postSubmit.textContent = 'Post It!';
+            this.postSubmit.className = 'post-submit btn btn-primary btn-block';
+            //Remove CancelButton
+            if(document.querySelector('.post-cancel')) {
+                document.querySelector('.post-cancel').remove();
+            }
+            //Clear id from hidden field
+            this.clearIdInput();
+            //Clear Text fields
+            this.clearFields();
+        }
+    }
+
+    
 }
 
 export const ui = new UI();

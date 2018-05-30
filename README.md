@@ -21,6 +21,11 @@ To serve in the browser  - Runs webpack-dev-server
 ```sh
 $ npm start
 ```
+To start the json server
+
+```sh
+$ npm run json:server
+```
 
 ### Build
 Compile and build
